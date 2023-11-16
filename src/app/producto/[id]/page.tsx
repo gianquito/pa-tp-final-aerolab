@@ -15,7 +15,7 @@ const getProduct = async (id: string) => {
 export default async function ProductoPage({ params }: { params: { id: string } }) {
     const product = await getProduct(params.id)
     return (
-        <div className='flex justify-around h-full items-center flex-col md:flex-row'>
+        <div className='flex justify-around h-full items-center flex-col md:flex-row gap-6 mt-10'>
             <div>
                 <p className='text-gray-400 mt-2 text-sm font-medium'>{product.category}</p>
                 <Image className='shadow-md' src={product.img.hdUrl} alt={product.name} width={504} height={364} />

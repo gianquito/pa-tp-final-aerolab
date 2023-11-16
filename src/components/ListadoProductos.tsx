@@ -15,7 +15,7 @@ export default async function Productos() {
     const productos = await getProducts()
     return (
         <section>
-            <div className='flex flex-wrap justify-center gap-6'>
+            <div className='flex flex-wrap justify-center gap-6 my-20'>
                 {productos.map((producto: product) => (
                     <Producto
                         nombre={producto.name}
